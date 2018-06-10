@@ -1,4 +1,5 @@
 
+graphData=d3.json("../data/data_corr.json")
 lista=[]
 lista=['radius_mean','texture_mean','perimeter_mean','area_mean',
       'smoothness_mean','compactness_mean','concavity_mean',

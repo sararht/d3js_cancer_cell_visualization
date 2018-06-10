@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Scatter Plot</title>
+    <style>    </style>
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+    <script> var graphData = {{ data.chart_data | safe }} </script>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <script type="text/javascript" src="../static/js/colorbrewer.js"></script>
+</head>
+
+<body>
+
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/Correlaciones">Matriz de correlaciones de las características</a></li>
+      <li><a href="/PCA">PCA</a></li>
+      <li><a class="active" href="/ScatterPlot">Scatter Plot</a></li>
+      <li><a href="/Diag_Radar">Diagramas de Radar</a></li>
+    </ul>
+
+
+</div>
+
+<div id="LeyendaCB" align= center style="width:100%; margin-top:3%" ></div>
+<div id="ComboBoxes" align= center style="width:100%" ></div>
+<div id="Scatter" align= center style="width:100%; margin-right: 3%">
+  <div id = "tabla" style="  float: right; margin-right: 300px; margin-top: 200px">
+
+    <table id = "datos">
+    <tbody>
+       <tr >
+        <td></td>
+        <td >Mean</td>
+        <td>SE</td>
+        <td>Worst</td>
+      </tr>
+      <tr>
+        <td class='titulo'>Radio</td>
+        <td id="RadiusMean"></td>
+        <td id="RadiusSE"></td>
+        <td id="RadiusWorst"></td>
+      </tr>
+      <tr>
+        <td class='titulo'>Textura</td>
+        <td id="TextureMean"></td>
+        <td id="TextureSE"></td>
+        <td id="TextureWorst"></td>
+      </tr>
+      <tr>
+        <td class='titulo'>Perímetro</td>
+        <td id ="PerimeterMean"></td>
+        <td id ="PerimeterSE"></td> 
+        <td id ="PerimeterWorst"></td>  
+
+      </tr>
+      <tr>
+        <td class='titulo'>Área</td>
+        <td id="AreaMean"></td> 
+        <td id="AreaSE"></td> 
+        <td id="AreaWorst"></td> 
+      </tr>
+      <tr>
+        <td class='titulo'>Suavidad</td>
+        <td id="SmoothnessMean"></td> 
+        <td id="SmoothnessSE"></td> 
+        <td id="SmoothnessWorst"></td> 
+      </tr>
+      <tr>
+        <td class='titulo'>Compacidad</td>
+        <td id="CompactnessMean"></td>
+        <td id="CompactnessSE"></td> 
+        <td id="CompactnessWorst"></td>  
+      </tr>
+      <tr>
+        <td class='titulo'>Concavidad</td>
+        <td id="ConcavityMean"></td>
+        <td id="ConcavitySE"></td> 
+        <td id="ConcavityWorst"></td>  
+      </tr>
+       <tr>
+        <td class='titulo'>Puntos Cóncavos</td>
+        <td id="ConcavePointsMean"></td>
+        <td id="ConcavePointsSE"></td> 
+        <td id="ConcavePointsWorst"></td>  
+      </tr>
+       <tr>
+        <td class='titulo'>Simetría</td>
+        <td id="SimmetryMean"></td>
+        <td id="SimmetrySE"></td> 
+        <td id="SimmetryWorst"></td>  
+      </tr>
+       <tr>
+        <td class='titulo'>Dimensión Fractal </td>
+        <td id="FractalDimensionMean"></td>
+        <td id="FractalDimensionSE"></td> 
+        <td id="FractalDimensionWorst"></td>  
+      </tr>
+    </tbody>
+    </table>    
+
+  </div>
+
+</div>
+<div id="splom" align= center style="width:100%; margin-left: 3%; margin-top: 5%; margin-right: 3%"></div>
+
+
+<script type="text/javascript" src="../static/js/ScatterPlot.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Radar: Worst</title>
+    <style>    </style>
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+    <script> var graphData = {{ data.chart_data | safe }} 
+             var graphDataM = {{ data.dataM | safe }}
+             var graphDataB = {{ data.dataB | safe }} 
+             var targets = {{ data.targets | safe}}</script>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+
+<body>
+
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/Correlaciones">Matriz de correlaciones de las características</a></li>
+      <li><a href="/PCA">PCA</a></li>
+      <li><a href="/ScatterPlot">Scatter Plot</a></li>
+      <li><a class="active" href="/Diag_Radar">Diagramas de Radar</a></li>
+    </ul>
+    <ul>
+      
+      <li><a href="/Diag_Radar">Mean</a></li>
+      <li><a href="/Diag_Radar_se">SE</a></li>
+      <li><a class="active" href="/Diag_Radar_worst">Worst</a></li>
+    </ul>
+
+    <div class="DiagramaRadar" id="chart">
+        <button class='BotonB'; style="margin-top:3%; margin-left: 40%">Animación: Benigno</button>
+        <button class='BotonParoB'>Parar</button>
+        <button class='BotonM'; style="margin-top:3%; margin-left: 7%">Animación: Maligno</button>
+        <button class='BotonParoM'>Parar</button>
+
+</div>
+
+<script type="text/javascript" src="../static/js/funcion Diag_radar.js"></script>
+<script type="text/javascript" src="../static/js/Diag_Radar_worst.js"></script>
+
+
+
+
+</body>
+</html>

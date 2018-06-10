@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>PCA</title>
+    <style>    </style>
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+    <script> var graphData = {{ data.chart_data | safe }} 
+             var targets = {{ data.targets | safe}}</script>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+
+<body>
+
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/Correlaciones">Matriz de correlaciones de las características</a></li>
+      <li><a class="active" href="/PCA">PCA</a></li>
+      <li><a href="/ScatterPlot">Scatter Plot</a></li>
+      <li><a href="/Diag_Radar">Diagramas de Radar</a></li>
+    </ul>
+
+    <div class="DiagramaPCA" id="chart">
+
+</div>
+
+<script type="text/javascript" src="../static/js/pca.js"></script>
+
+
+
+</body>
+</html>

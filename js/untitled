@@ -1,0 +1,19 @@
+
+Autora: Sara Roos Hoefgeest Toribio
+		uo240174@uniovi.es
+
+Asignatura: Visualización de datos
+			Máster en Automatización e Informática Industrial
+
+
+Árbol de carpetas:
+
+	-servidor.py: script de python que contiene el servidor.
+	-static:
+		-css: directorio que almacena el archivo css de estilo.
+		-js: directorio que almacena los archivos javascript de la aplicación.
+		-photos: directorio que almacena las imágenes de la aplicación.
+		-favicon.ico: imagen en formato ico para el favicon de la aplicación.
+	-templates: directorio que almacena los html de la aplicación.
+	-data.csv: archivo csv con los datos originales.
+

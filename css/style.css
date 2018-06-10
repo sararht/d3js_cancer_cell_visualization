@@ -1,0 +1,422 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  min-height: 100vh;
+  min-width: 100vh;
+  font-family: "Times New Roman";
+}
+
+body.home{
+    background: #3e3947
+}
+
+
+.opcionesPortada{
+  color: pink;
+  text-align: center;
+  font-size: 25px;
+  font-variant: small-caps;
+  margin-top:5%;
+  margin-left: 45%;
+}
+
+.CircOpcion {
+display: inline-block;
+position: absolute;
+margin-bottom: 5%;
+height: 30px;
+width: 30px;
+border-radius: 100%;
+background-color: pink;
+    }
+
+.Matriz{ 
+  margin-left: 35%;
+
+}
+.Scatter{ 
+  margin-left: 45%;
+}
+.PCA{ 
+  margin-left: 55%;
+}
+.Radares{ 
+  margin-left: 65%;
+}
+
+.CircOpcion.Matriz:hover
+{
+  
+  left: -50px;
+  margin-left:37%;
+  margin-top: -2%;
+  border:1px solid purple;
+  height: 100px;
+  width: 100px;
+  background-image: url("../photos/matrix.jpg"); 
+  
+
+}
+
+.CircOpcion.Scatter:hover
+{
+  border:1px solid pink;
+  height: 100px;
+  width: 100px;
+  background-image: url("../photos/SPLOM.jpg");
+  left: -50px;
+  margin-left:47%;
+  margin-top: -2%; 
+}
+
+.CircOpcion.PCA:hover
+{
+  border:1px solid pink;
+  height: 100px;
+  width: 100px;
+  background-image: url("../photos/PCA.jpg");
+  left: -50px;
+  margin-left:57%;
+  margin-top: -2%; 
+}
+
+.CircOpcion.Radares:hover
+{
+  border:1px solid pink;
+  height: 100px;
+  width: 100px;
+  background-image: url("../photos/Radar.jpg");
+  left: -50px;
+  margin-left:67%;
+  margin-top: -2%; 
+}
+
+
+
+
+.CircOpcion.Matriz:hover + .opcionesMatriz {
+display:block;
+}
+.opcionesMatriz {
+display:none;
+
+
+}
+
+.CircOpcion.Scatter:hover + .opcionesScatter {
+display:block;
+}
+.opcionesScatter {
+display:none; 
+}
+
+.CircOpcion.PCA:hover + .opcionesPCA {
+display:block;
+}
+.opcionesPCA {
+display:none; 
+}
+
+.CircOpcion.Radares:hover + .opcionesRadar {
+display:block;
+}
+
+.opcionesRadar {
+display:none; 
+}
+
+
+
+
+.container{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container2{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.textoPortada{
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  font-variant: small-caps;
+  margin-top: 15%;
+  font-variant: small-caps;
+  margin-bottom: 5%
+
+}
+
+
+.descripcionPortada{
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  margin-top:1%;
+  margin-left: 20%
+  margin-right:20%;
+  /*font-variant: small-caps;*/
+  
+    
+}
+
+.cita{
+  margin-top: 5%;
+  margin-left: 3%;
+  margin-bottom: 10%;
+  color: pink;
+  text-align: center;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.Autor{
+ /* margin-top: 5%;*/
+  margin-left: 3%;
+  margin-bottom: 5%;
+  margin-right: 3%;
+  color: pink;
+  text-align: right;
+  font-style: italic;
+  font-size: 18px;
+}
+
+a.subtitulo{
+  margin-top: 1%;
+  margin-left: 3%;
+  margin-bottom: 5%;
+  margin-right: 3%;
+  color: white;
+  text-align: center;
+  font-style: italic;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+
+a.hipervinculo:hover{
+  color: hotpink;
+  cursor: pointer;
+
+}
+
+.circPortada{
+  stroke: white;
+  stroke-width: 1px;
+}
+
+.circPortada:hover:not(.circActive){
+  fill:violet;
+  stroke: violet; 
+  stroke-width: 4px;
+}
+
+.circPortada:hover .opcionesPortada {
+  visibility: visible;
+}
+
+.circActive{
+  fill: white;
+}
+
+
+ul {  
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /*width: 200px;*/
+    background-color: #333;
+    /*height: 100%;*/
+    overflow: hidden;
+    /*position: fixed;*/
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+li a.active {
+    background-color: white;
+    color: black;
+}
+
+li a:hover:not(.active) {
+    background-color: white;
+    color: black;
+}
+
+div.cuerpo {
+    margin-left:200px;
+    padding:1px 30px;
+    height:1000px;
+}
+
+div.matrizCorrelacion {
+  margin-left: 20%;
+  height: 100%
+  width: 100%;
+
+}
+
+div.Radar {
+  margin-left: 20%;
+  height: 100vh
+  width: 100vh;
+
+}
+
+img {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+img:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
+
+.ticks {
+  font: 10px sans-serif;
+}
+
+.track,
+.track-inset,
+.track-overlay {
+  stroke-linecap: round;
+}
+
+.track {
+  stroke: #000;
+  stroke-opacity: 0.3;
+  stroke-width: 10px;
+}
+
+.track-inset {
+  stroke: #ddd;
+  stroke-width: 8px;
+}
+
+.track-overlay {
+  pointer-events: stroke;
+  stroke-width: 50px;
+  stroke: transparent;
+  cursor: crosshair;
+}
+
+.track-overlay {
+  pointer-events: stroke;
+  stroke-width: 50px;
+  stroke: transparent;
+  cursor: crosshair;
+}
+
+.handle {
+  fill: #fff;
+  stroke: #000;
+  stroke-opacity: 0.5;
+  stroke-width: 1.25px;
+}
+
+.handleM {
+  fill: #fff;
+  stroke: #000;
+  stroke-opacity: 0.5;
+  stroke-width: 1.25px;
+}
+
+.active {
+  stroke: #000;
+  stroke-width: 4px;
+}
+
+text.selected {
+  fill: red;
+}
+
+
+.tick text.selected {
+    font-weight: bold;
+    font-size: 1.2em;
+    fill: #47ff63;
+  }
+
+.tick line.selected {
+    stroke: #47ff63;  
+  }
+
+
+
+circle.hidden {
+  fill: #ccc !important;
+}
+
+
+
+.selection {
+  fill: #000;
+  fill-opacity: .125;
+  stroke: #fff;
+}
+
+.axis,
+.frame {
+  shape-rendering: crispEdges; 
+}
+
+.axis line {
+  stroke: #ddd;
+}
+
+.axis path {
+  display: none;
+}
+
+.cell text {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.frame {
+  fill: none;
+  stroke: #aaa;
+}
+
+
+#datos table {
+    font-family: sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-right:50px;
+    background: #fff;    
+}
+
+#datos td {
+
+    border-bottom: 1px solid #aaa;
+    font-weight: normal;
+    text-align: center;
+    min-width:70px;
+    padding: 2px;
+}
+
+#datos td.titulo{
+  text-align: left;
+} 

@@ -1,5 +1,6 @@
 
-graphData=d3.json("../data/data_corr.json")
+d3.json("static/data/data_corr.json", function(error, graphData) {
+    
 lista=[]
 lista=['radius_mean','texture_mean','perimeter_mean','area_mean',
       'smoothness_mean','compactness_mean','concavity_mean',
@@ -400,3 +401,6 @@ legend.exit().remove();
     }
 
 
+
+
+});

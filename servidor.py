@@ -72,30 +72,30 @@ def CalculoPCA():
   pca = PCA(n_components=2)
   pca_2d = pca.fit_transform(X)
   pca_2d_df=pd.DataFrame(pca_2d)
-  chart_data = pca_2d_df.to_json()
-  y_df_json=y_df.to_json('data_pca.json')
+  chart_data = pca_2d_df.to_json('data_pca.json')
+  y_df_json=y_df.to_json('targets_pca.json')
   data={'chart_data': chart_data, 'targets':y_df_json}
   return render_template("PCA.html", data=data)
 
 @app.route("/Diag_Radar")
 
 def Diag_Radar():
-  chart_data=x.to_json()
+  chart_data=x.to_json('data_dg_mean.json')
 
-  dataM=data_malignos.to_json()
-  dataB=data_benignos.to_json()
-  y_df_json=y_df.to_json('data_dg_mean.json')
+  dataM=data_malignos.to_json('dataM_dg_mean.json')
+  dataB=data_benignos.to_json('dataB_dg_mean.json')
+  y_df_json=y_df.to_json('targets_dg_mean.json')
   data={'chart_data': chart_data, 'dataM':dataM, 'dataB':dataB, 'targets':y_df_json}
   return render_template("Diag_Radar.html", data=data)
 
 @app.route("/Diag_Radar_se")
 
 def Diag_Radar_se():
-  chart_data=x.to_json()
+  chart_data=x.to_json('data_dg_se.json')
 
-  dataM=data_malignos.to_json()
-  dataB=data_benignos.to_json()
-  y_df_json=y_df.to_json('data_dg_se.json')
+  dataM=data_malignos.to_json('dataM_dg_se.json')
+  dataB=data_benignos.to_json('dataB_dg_se.json')
+  y_df_json=y_df.to_json('targets_dg_se.json')
   data={'chart_data': chart_data, 'dataM':dataM, 'dataB':dataB, 'targets':y_df_json}
   return render_template("Diag_Radar_se.html", data=data)
 
@@ -103,11 +103,11 @@ def Diag_Radar_se():
 @app.route("/Diag_Radar_worst")
 
 def Diag_Radar_worst():
-  chart_data=x.to_json()
+  chart_data=x.to_json('data_dg_worst.json')
 
-  dataM=data_malignos.to_json()
-  dataB=data_benignos.to_json()
-  y_df_json=y_df.to_json('data_dg_worst.json')
+  dataM=data_malignos.to_json('dataM_dg_worst.json')
+  dataB=data_benignos.to_json('dataB_dg_worst.json')
+  y_df_json=y_df.to_json('targets_dg_worst.json')
   data={'chart_data': chart_data, 'dataM':dataM, 'dataB':dataB, 'targets':y_df_json}
   return render_template("Diag_Radar_worst.html", data=data)
 

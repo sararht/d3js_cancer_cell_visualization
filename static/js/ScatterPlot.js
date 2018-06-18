@@ -1,4 +1,4 @@
-d3.json("static/data/data_Scatter.json", function(error, graphData) {
+d3.json("static/data/data_scatter.json", function(error, graphData) {
 
 
 	datos=graphData

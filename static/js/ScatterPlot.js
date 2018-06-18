@@ -1,5 +1,5 @@
 d3.json("static/data/data_scatter.json", function(error, graphData) {
-
+	// cargamos datos
 
 	datos=graphData
 
